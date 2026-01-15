@@ -60,4 +60,10 @@ updated_state = graph_with_checkpointer.invoke(
     {"messages":["what is my name?"]},
     config
 )
-print("updated_state", updated_state)
+
+for chunk in graph_with_checkpointer.stream(
+    State({"messages": ["what is my name?"]}),
+    config,
+    stream_mode="values"
+):
+    chunk["messages"][-1].pretty_print()
