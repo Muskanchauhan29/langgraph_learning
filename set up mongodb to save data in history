@@ -1,0 +1,62 @@
+# LangGraph Chatbot with MongoDB Memory 🧠💾
+
+This project demonstrates how to build a **LangGraph-based chatbot** that stores **persistent chat history in MongoDB** using `MongoDBSaver`.
+
+Unlike in-memory storage, this setup ensures that conversation history is **not lost when the application restarts**.
+
+---
+
+## ✨ Features
+
+- ✅ LangGraph state-based chatbot
+- ✅ Persistent chat history using MongoDB
+- ✅ Thread-based conversations (`thread_id`)
+- ✅ Uses OpenAI chat models
+- ✅ Production-ready memory storage
+
+---
+
+## 🛠️ Tech Stack
+
+- **Python**
+- **LangGraph**
+- **LangChain**
+- **MongoDB**
+- **OpenAI**
+- **python-dotenv**
+
+---
+
+## 📁 Project Structure
+.
+├── chatbot.py # Main chatbot code
+├── .env # Environment variables
+├── README.md # Project documentation
+---
+
+## 🔧 Prerequisites
+
+### 1️⃣ Install MongoDB (Local)
+
+Download and install **MongoDB Community Server**  
+👉 https://www.mongodb.com/try/download/community
+
+- Make sure MongoDB is running on port **27017**
+- Optional: Use **MongoDB Compass** for viewing data
+
+Connection URI:
+mongodb://localhost:27017
+
+
+---
+
+### 2️⃣ Install Python Dependencies
+
+
+pip install langgraph langchain pymongo python-dotenv
+
+🔐 Environment Variables
+
+Create a .env file in the root directory:
+
+OPENAI_API_KEY=your_openai_api_key_here
